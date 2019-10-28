@@ -1,0 +1,39 @@
+<div class="hero">
+    <div id="back">
+        <span>Which pizza is more affordable?</span>
+    </div>
+    <div id="containers">
+        <div class="container1" >
+            <span>Fill in the information</span><br>
+            <span class="arrow">↓</span>
+            <div class="inputs">
+                <input type="number" placeholder="Pizza diameter in cm" [(ngModel)]="firstDiameter">
+                <input type="number" placeholder="Pizza price" [(ngModel)]="firstPrice">
+            </div>
+            <div class="price">Price for 1 square cm is {{ price1 }} €</div>
+            <img id="pizzaY" src="../../assets/Pizzas/pizzaY.png">
+        </div>
+        <div class="container2" >
+            <span>Fill in the information</span><br>
+            <span class="arrow">↓</span>
+            <div class="inputs">
+                <input type="number" placeholder="Pizza diameter in cm" [(ngModel)]="secondDiameter">
+                <input type="number" placeholder="Pizza price" [(ngModel)]="secondPrice">
+            </div>
+            <div class="price">Price for 1 square cm is {{ price2 }} €</div>
+            <img id="pizzaP" src="../../assets/Pizzas/pizzaP.png">
+        </div> 
+    </div>  
+    <button id="compare" (click)="compareTwo()">COMPARE
+
+        <!-- <a class="button" href="#popup1">COMPARE</a> -->
+    </button>
+
+    <div id="popup1" class="overlay">
+        <div class="popup">
+            <h2>Here is the result !</h2>
+                <a class="close" (click)="closePopUp()">&times;</a>
+            <div class="content">{{ moreAfforable }}</div>
+        </div>
+    </div>
+</div>
